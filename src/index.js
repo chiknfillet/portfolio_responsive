@@ -4,7 +4,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import battleShipImg from './assets/battleship.jpeg';
 import weatherAppImg from './assets/weather_app.jpeg';
-import toDoListImg from './assets/to_do_list.jpeg'
+import toDoListImg from './assets/to_do_list.jpeg';
+import adminDashboardImg from './assets/admin_dashboard.jpeg'
 
 const projects = [
   {'name': 'Weather App',
@@ -22,8 +23,14 @@ const projects = [
   {'name': 'To Do List',
     'img': toDoListImg,
     'description': 'A simple productivity app that lets users add, edit, and manage daily tasks.',
-    'github': 'https://github.com/chiknfillet/weather_app',
+    'github': 'https://github.com/chiknfillet/to_do_list',
     'link': 'https://chiknfillet.github.io/weather_app/'
+  },
+  {'name': 'Admin Dashboard',
+    'img': adminDashboardImg,
+    'description': 'An admin dashboard displaying projects that I created to practice flex layouts',
+    'github': 'https://github.com/chiknfillet/admin_dashboard',
+    'link': 'https://chiknfillet.github.io/admin_dashboard/'
   }
 ]
 
@@ -33,7 +40,7 @@ for (const project of projects) {
 
 function createProjectCard(name, imageSrc, description, githubLink, liveLink) {
   // Select the container where cards will go
-  const container = document.querySelector('.proects-container');
+  const container = document.querySelector('.projects-container');
 
   // Create card elements
   const card = document.createElement('div');
@@ -47,7 +54,7 @@ function createProjectCard(name, imageSrc, description, githubLink, liveLink) {
   details.classList.add('details');
 
   const nameLinks = document.createElement('div');
-  nameLinks.classList.add('nameLinks');
+  nameLinks.classList.add('name-links');
 
   const title = document.createElement('h3');
   title.textContent = name;
